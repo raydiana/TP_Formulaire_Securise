@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+    </head>
+    <body>
+        <form action="connexion.php" method="post">
+            <div class="container">
+              <h1>Se connecter</h1>
+              <hr>
+              <label for="nom"><b>Identifiant</b></label>
+              <input type="text" name="username" placeholder="Nom" id="nom" required>
+              <br><br>
+              <label for="psw"><b>Mot de passe</b></label>
+              <input type="password" placeholder="Mot de passe" name="mot_de_passe" id="psw" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+              <hr>
+              <button type="submit" class="registerbtn" name="valider" value="submit">Valider</button>
+            </div>
+          </form>
+          <form>
+            <button type="button" id="resetButton">Reset</button>
+          </form>
+          <form>
+            <input type="button" value="Ajout compte" onclick="window.location.href='inscription.html'">
+          </form>          
+          <script>
+            const resetButton = document.querySelector("#resetButton");
+            const inputText = document.querySelector("#nom");
+            const inputText1 = document.querySelector("#psw");
+            resetButton.addEventListener("click", function() {
+              inputText.value = "";
+              inputText1.value = "";
+            });
+          </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Inscription</title>
+    </head>
+    <body>
+        <form action="inscription.php" method="post">
+            <div class="container">
+              <h1>Inscription</h1>
+              <p>Ajout d'un compte.</p>
+              <hr>
+              <label for="nom"><b>Nom</b></label>
+              <input type="text" name="username" placeholder="Nom" id="nom" required>
+              <br><br>
+
+              <label for="email"><b>Email</b></label>
+              <input type="text" name="email" placeholder="email" id="email" required>
+              <br><br>
+
+              <label for="psw"><b>Mot de passe</b></label>
+              <input type="password" placeholder="Mot de passe" name="mot_de_passe" id="psw" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+              <hr>
+              
+              <button type="submit" class="registerbtn" value="submit" name="insert">S'inscrire</button>
+            </div>
+            <div class="container signin">
+              <p>Vous avez déjà un compte<a href="login.html">Se connecter</a>.</p>
+            </div>
+          </form>
+    </body>
+</html>
+
